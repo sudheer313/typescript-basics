@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Logger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+        }
+        label, input, select {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Finance Logger</h1>
+    <form id="finance-form">
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tofrom">To/From:</label>
+            <input type="text" id="tofrom" name="tofrom" placeholder="To/From" required>
+        </div>
+
+        <div class="form-group">
+            <label for="details">Details:</label>
+            <input type="text" id="details" name="details" placeholder="Details" required>
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Amount" step="0.01" min="0" required>
+        </div>
+
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
