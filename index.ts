@@ -110,4 +110,6 @@
 //   console.log(nihar.hireDate);
   
 console.log("Sudheer");
+const character="mario"
+console.log(character)
 
